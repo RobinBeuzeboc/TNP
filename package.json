@@ -2,9 +2,6 @@
   "name": "portfoliotn20",
   "version": "0.1.0",
   "private": true,
-  "engines": {
-    "node": "10.16.3"
-  },
   "main": "dist/index.js",
   "dependencies": {
     "@material-ui/core": "4.9.7",
@@ -33,9 +30,7 @@
     "eslint-plugin-react": "7.14.3",
     "gulp": "4.0.2",
     "gulp-append-prepend": "1.0.8",
-    "prettier": "1.18.2",
-    "babel-eslint": "^10.0.2",
-    "standard": "^11.0.1"
+    "prettier": "1.18.2"
   },
   "optionalDependencies": {
     "typescript": "3.5.3"
