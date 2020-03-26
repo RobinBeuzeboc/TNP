@@ -7,22 +7,22 @@ import { makeStyles } from "@material-ui/core/styles";
 import MenuBookIcon from '@material-ui/icons/MenuBook';
 import WorkIcon from '@material-ui/icons/Work';
 import AccountTreeIcon from '@material-ui/icons/AccountTree';
-
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
 // core components
+import IconButton from '@material-ui/core/IconButton';
 import Header from "./profilePageComponents/Header/Header.js";
 import Footer from "./profilePageComponents/Footer/Footer.js";
-import Button from "./profilePageComponents/CustomButtons/Button.js";
 import GridContainer from "./profilePageComponents/Grid/GridContainer.js";
 import GridItem from "./profilePageComponents/Grid/GridItem.js";
 // import HeaderLinks from "./profilePageComponents/Header/HeaderLinks.js";
 import NavPills from "./profilePageComponents/NavPills/NavPills.js";
 import Parallax from "./profilePageComponents/Parallax/Parallax.js";
 
+// import images
 import profile from "../assets/img/faces/thibaut-profile-round.jpg";
-
 import study1 from "../assets/img/study-1.jpg"
 
-
+// import styles
 import profilePageStyle from "../assets/jss/material-kit-react/views/profilePage.js";
 
 const useStyles = makeStyles(profilePageStyle);
@@ -39,7 +39,7 @@ export default function Portfolio(props) {
   return (
     <div>
       <Header
-        color="transparent"
+        color='transparent'
         brand="Thibaut Neu"
         // rightLinks={<HeaderLinks />}
         fixed
@@ -62,15 +62,9 @@ export default function Portfolio(props) {
                   <div className={classes.name}>
                     <h3 className={classes.title}>Thibaut Neu</h3> <br />
                     <h4 className={classes.title}>CHEF DE PROJET</h4><br />
-                    <Button justIcon link className={classes.margin5}>
-                      <i className={"fab fa-twitter"} />
-                    </Button>
-                    <Button justIcon link className={classes.margin5}>
-                      <i className={"fab fa-instagram"} />
-                    </Button>
-                    <Button justIcon link className={classes.margin5}>
-                      <i className={"fab fa-facebook"} />
-                    </Button>
+                    <IconButton onClick={()=> window.open("https://www.linkedin.com/in/thibaut-neu-080307b7/", "_blank")}>
+                      <LinkedInIcon fontSize='large' color='primary'/>
+                    </IconButton>
                   </div>
                 </div>
               </GridItem>
