@@ -20,7 +20,12 @@ import Parallax from "./profilePageComponents/Parallax/Parallax.js";
 
 // import images
 import profile from "../assets/img/faces/thibaut-profile-round.jpg";
+
 import study1 from "../assets/img/study-1.jpg"
+
+import project1 from '../assets/img/project-1.png'
+import project2 from '../assets/img/project-2.png'
+import project3 from '../assets/img/project-3.png'
 
 // import styles
 import profilePageStyle from "../assets/jss/material-kit-react/views/profilePage.js";
@@ -86,11 +91,13 @@ export default function Portfolio(props) {
                       tabContent: (
                         <GridContainer justify="center">
                           <GridItem xs={12} sm={12} md={4}>
+                          <a href='https://www.iim.fr/'>
                             <img
                               alt="..."
                               src={study1}
                               className={navImageClasses}
                             />
+                            </a>
                           </GridItem>
                         </GridContainer>
                       )
@@ -101,33 +108,27 @@ export default function Portfolio(props) {
                       tabContent: (
                         <GridContainer justify="center">
                           <GridItem xs={12} sm={12} md={4}>
+                          <a href='https://alcoometre.fr/'>
                             <img
                               alt="..."
-                              src={study1}
+                              src={project1}
                               className={navImageClasses}
                             />
+                          </a>
+                          <a href='https://www.dondorganes.fr/'>      
+                              <img
+                                alt="..."
+                                src={project2}
+                                className={navImageClasses}
+                              />
+                          </a>
+                          <a href='https://campus-vtc.com/'>
                             <img
                               alt="..."
-                              src={study1}
+                              src={project3}
                               className={navImageClasses}
                             />
-                            <img
-                              alt="..."
-                              src={study1}
-                              className={navImageClasses}
-                            />
-                          </GridItem>
-                          <GridItem xs={12} sm={12} md={4}>
-                            <img
-                              alt="..."
-                              src={study1}
-                              className={navImageClasses}
-                            />
-                            <img
-                              alt="..."
-                              src={study1}
-                              className={navImageClasses}
-                            />
+                          </a>
                           </GridItem>
                         </GridContainer>
                       )
@@ -138,60 +139,7 @@ export default function Portfolio(props) {
                       tabContent: (
                         <GridContainer justify="center">
                           <GridItem xs={12} sm={12} md={4}>
-                            <img
-                              alt="..."
-                              src={study1}
-                              className={navImageClasses}
-                            />
-                            <img
-                              alt="..."
-                              src={study1}
-                              className={navImageClasses}
-                            />
-                            <img
-                              alt="..."
-                              src={study1}
-                              className={navImageClasses}
-                            />
-                          </GridItem>
-                          <GridItem xs={12} sm={12} md={4}>
-                            <img
-                              alt="..."
-                              src={study1}
-                              className={navImageClasses}
-                            />
-                            <img
-                              alt="..."
-                              src={study1}
-                              className={navImageClasses}
-                            />
-                          </GridItem>
-                        </GridContainer>
-                      )
-                    },
-                    {
-                      tabButton: "Favorite",
-                      tabIcon: AccountTreeIcon,
-                      tabContent: (
-                        <GridContainer justify="center">
-                          <GridItem xs={12} sm={12} md={4}>
-                            <img
-                              alt="..."
-                              src={study1}
-                              className={navImageClasses}
-                            />
-                            <img
-                              alt="..."
-                              src={study1}
-                              className={navImageClasses}
-                            />
-                          </GridItem>
-                          <GridItem xs={12} sm={12} md={4}>
-                            <img
-                              alt="..."
-                              src={study1}
-                              className={navImageClasses}
-                            />
+                            <h1 className={navImageClasses}> ALLO </h1>
                             <img
                               alt="..."
                               src={study1}
