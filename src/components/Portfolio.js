@@ -3,12 +3,20 @@ import React from "react";
 import classNames from "classnames";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
+import Slide from "@material-ui/core/Slide";
+
 // @material-ui/icons
+import Close from "@material-ui/icons/Close";
 import MenuBookIcon from '@material-ui/icons/MenuBook';
 import WorkIcon from '@material-ui/icons/Work';
 import AccountTreeIcon from '@material-ui/icons/AccountTree';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 // core components
+import Button from "./profilePageComponents/CustomButtons/Button.js";
+import Dialog from "@material-ui/core/Dialog";
+import DialogTitle from "@material-ui/core/DialogTitle";
+import DialogContent from "@material-ui/core/DialogContent";
+import DialogActions from "@material-ui/core/DialogActions";
 import IconButton from '@material-ui/core/IconButton';
 import Header from "./profilePageComponents/Header/Header.js";
 import Footer from "./profilePageComponents/Footer/Footer.js";
@@ -32,6 +40,11 @@ import profilePageStyle from "../assets/jss/material-kit-react/views/profilePage
 
 const useStyles = makeStyles(profilePageStyle);
 
+const Transition = React.forwardRef(function Transition(props, ref) {
+  return <Slide direction="down" ref={ref} {...props} />;
+});
+
+Transition.displayName = "Transition";
 export default function Portfolio(props) {
   const classes = useStyles();
   const { ...rest } = props;
@@ -41,6 +54,10 @@ export default function Portfolio(props) {
     classes.imgFluid
   );
   const navImageClasses = classNames(classes.imgRounded, classes.imgGallery);
+  const [classicModal, setClassicModal] = React.useState(false);
+  const [classicModal1, setClassicModal1] = React.useState(false);
+  const [classicModal2, setClassicModal2] = React.useState(false);
+
   return (
     <div>
       <Header
@@ -86,7 +103,7 @@ export default function Portfolio(props) {
                   color="primary"
                   tabs={[
                     {
-                      tabButton: "Etudes",
+                      tabButton: "Formation",
                       tabIcon: MenuBookIcon,
                       tabContent: (
                         <GridContainer justify="center">
@@ -139,17 +156,204 @@ export default function Portfolio(props) {
                       tabContent: (
                         <GridContainer justify="center">
                           <GridItem xs={12} sm={12} md={4}>
-                            <h1 className={navImageClasses}> ALLO </h1>
                             <img
                               alt="..."
                               src={study1}
                               className={navImageClasses}
+                              onClick={() => setClassicModal(true)}
                             />
+                          <Dialog
+                            classes={{
+                              root: classes.center,
+                              paper: classes.modal
+                            }}
+                            open={classicModal}
+                            TransitionComponent={Transition}
+                            keepMounted
+                            onClose={() => setClassicModal(false)}
+                            aria-labelledby="classic-modal-slide-title"
+                            aria-describedby="classic-modal-slide-description"
+                          >
+                            <DialogTitle
+                              id="classic-modal-slide-title"
+                              disableTypography
+                              className={classes.modalHeader}
+                            >
+                              <IconButton
+                                className={classes.modalCloseButton}
+                                key="close"
+                                aria-label="Close"
+                                color="inherit"
+                                onClick={() => setClassicModal(false)}
+                              >
+                                <Close className={classes.modalClose} />
+                              </IconButton>
+                              <h4 className={classes.modalTitle}>Modal title 1</h4>
+                            </DialogTitle>
+                            <DialogContent
+                              id="classic-modal-slide-description"
+                              className={classes.modalBody}
+                            >
+                              <p>
+                                Far far away, behind the word mountains, far from the
+                                countries Vokalia and Consonantia, there live the blind
+                                texts. Separated they live in Bookmarksgrove right at the
+                                coast of the Semantics, a large language ocean. A small
+                                river named Duden flows by their place and supplies it
+                                with the necessary regelialia. It is a paradisematic
+                                country, in which roasted parts of sentences fly into your
+                                mouth. Even the all-powerful Pointing has no control about
+                                the blind texts it is an almost unorthographic life One
+                                day however a small line of blind text by the name of
+                                Lorem Ipsum decided to leave for the far World of Grammar.
+                              </p>
+                            </DialogContent>
+                            <DialogActions className={classes.modalFooter}>
+                              <Button color="transparent" simple>
+                                Nice Button
+                              </Button>
+                              <Button
+                                onClick={() => setClassicModal(false)}
+                                color="danger"
+                                simple
+                              >
+                                Close
+                              </Button>
+                            </DialogActions>
+                          </Dialog>     
+
                             <img
                               alt="..."
                               src={study1}
                               className={navImageClasses}
+                              onClick={() => setClassicModal1(true)}
                             />
+                             <Dialog
+                            classes={{
+                              root: classes.center,
+                              paper: classes.modal
+                            }}
+                            open={classicModal1}
+                            TransitionComponent={Transition}
+                            keepMounted
+                            onClose={() => setClassicModal1(false)}
+                            aria-labelledby="classic-modal-slide-title"
+                            aria-describedby="classic-modal-slide-description"
+                          >
+                            <DialogTitle
+                              id="classic-modal-slide-title"
+                              disableTypography
+                              className={classes.modalHeader}
+                            >
+                              <IconButton
+                                className={classes.modalCloseButton}
+                                key="close"
+                                aria-label="Close"
+                                color="inherit"
+                                onClick={() => setClassicModal1(false)}
+                              >
+                                <Close className={classes.modalClose} />
+                              </IconButton>
+                              <h4 className={classes.modalTitle}>Modal title 2 </h4>
+                            </DialogTitle>
+                            <DialogContent
+                              id="classic-modal-slide-description"
+                              className={classes.modalBody}
+                            >
+                              <p>
+                                Far far away, behind the word mountains, far from the
+                                countries Vokalia and Consonantia, there live the blind
+                                texts. Separated they live in Bookmarksgrove right at the
+                                coast of the Semantics, a large language ocean. A small
+                                river named Duden flows by their place and supplies it
+                                with the necessary regelialia. It is a paradisematic
+                                country, in which roasted parts of sentences fly into your
+                                mouth. Even the all-powerful Pointing has no control about
+                                the blind texts it is an almost unorthographic life One
+                                day however a small line of blind text by the name of
+                                Lorem Ipsum decided to leave for the far World of Grammar.
+                              </p>
+                            </DialogContent>
+                            <DialogActions className={classes.modalFooter}>
+                              <Button color="transparent" simple>
+                                Nice Button
+                              </Button>
+                              <Button
+                                onClick={() => setClassicModal1(false)}
+                                color="danger"
+                                simple
+                              >
+                                Close
+                              </Button>
+                            </DialogActions>
+                          </Dialog>
+
+                            <img
+                              alt="..."
+                              src={study1}
+                              className={navImageClasses}
+                              onClick={() => setClassicModal2(true)}
+
+                            />
+                            <Dialog
+                            classes={{
+                              root: classes.center,
+                              paper: classes.modal
+                            }}
+                            open={classicModal2}
+                            TransitionComponent={Transition}
+                            keepMounted
+                            onClose={() => setClassicModal2(false)}
+                            aria-labelledby="classic-modal-slide-title"
+                            aria-describedby="classic-modal-slide-description"
+                          >
+                            <DialogTitle
+                              id="classic-modal-slide-title"
+                              disableTypography
+                              className={classes.modalHeader}
+                            >
+                              <IconButton
+                                className={classes.modalCloseButton}
+                                key="close"
+                                aria-label="Close"
+                                color="inherit"
+                                onClick={() => setClassicModal2(false)}
+                              >
+                                <Close className={classes.modalClose} />
+                              </IconButton>
+                              <h4 className={classes.modalTitle}>Modal title 3 </h4>
+                            </DialogTitle>
+                            <DialogContent
+                              id="classic-modal-slide-description"
+                              className={classes.modalBody}
+                            >
+                              <p>
+                                Far far away, behind the word mountains, far from the
+                                countries Vokalia and Consonantia, there live the blind
+                                texts. Separated they live in Bookmarksgrove right at the
+                                coast of the Semantics, a large language ocean. A small
+                                river named Duden flows by their place and supplies it
+                                with the necessary regelialia. It is a paradisematic
+                                country, in which roasted parts of sentences fly into your
+                                mouth. Even the all-powerful Pointing has no control about
+                                the blind texts it is an almost unorthographic life One
+                                day however a small line of blind text by the name of
+                                Lorem Ipsum decided to leave for the far World of Grammar.
+                              </p>
+                            </DialogContent>
+                            <DialogActions className={classes.modalFooter}>
+                              <Button color="transparent" simple>
+                                Nice Button
+                              </Button>
+                              <Button
+                                onClick={() => setClassicModal2(false)}
+                                color="danger"
+                                simple
+                              >
+                                Close
+                              </Button>
+                            </DialogActions>
+                          </Dialog>    
                           </GridItem>
                         </GridContainer>
                       )
