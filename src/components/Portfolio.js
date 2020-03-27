@@ -35,6 +35,14 @@ import project1 from '../assets/img/project-1.png'
 import project2 from '../assets/img/project-2.png'
 import project3 from '../assets/img/project-3.png'
 
+import job1 from '../assets/img/job-1.png'
+import job2 from '../assets/img/job-2.jpg'
+import job3 from '../assets/img/job-3.jpg'
+
+import client1 from '../assets/img/client-1.jpg'
+import client2 from '../assets/img/client-2.jpg'
+import client3 from '../assets/img/client-3.png'
+
 // import styles
 import profilePageStyle from "../assets/jss/material-kit-react/views/profilePage.js";
 
@@ -158,7 +166,7 @@ export default function Portfolio(props) {
                           <GridItem xs={12} sm={12} md={4}>
                             <img
                               alt="..."
-                              src={study1}
+                              src={job1}
                               className={navImageClasses}
                               onClick={() => setClassicModal(true)}
                             />
@@ -188,43 +196,69 @@ export default function Portfolio(props) {
                               >
                                 <Close className={classes.modalClose} />
                               </IconButton>
-                              <h4 className={classes.modalTitle}>Modal title 1</h4>
+                              <h3 className={classes.modalTitle}>DDB: Assistant Chef de Projet Digital</h3>
+                              <h4 className={classes.modalTitle}>Alternance</h4>
+                              <h5 className={classes.modalTitle}>2018-2019</h5>
                             </DialogTitle>
                             <DialogContent
                               id="classic-modal-slide-description"
                               className={classes.modalBody}
                             >
-                              <p>
-                                Far far away, behind the word mountains, far from the
-                                countries Vokalia and Consonantia, there live the blind
-                                texts. Separated they live in Bookmarksgrove right at the
-                                coast of the Semantics, a large language ocean. A small
-                                river named Duden flows by their place and supplies it
-                                with the necessary regelialia. It is a paradisematic
-                                country, in which roasted parts of sentences fly into your
-                                mouth. Even the all-powerful Pointing has no control about
-                                the blind texts it is an almost unorthographic life One
-                                day however a small line of blind text by the name of
-                                Lorem Ipsum decided to leave for the far World of Grammar.
-                              </p>
+                              <table>
+                                  <tr>
+                                    •	 Refonte du site <a href='https://alcoometre.fr/'>Alcoometre.fr</a>
+                                  </tr>
+                                  <tr>
+                                    •	Production des visuels et des maquettes
+                                  </tr>
+                                  <tr>
+                                    •	 Recettes
+                                  </tr>
+                                  <tr>
+                                    •	 Production de campagnes Display (Uber et Intermarché)
+                                  </tr>
+                                  <tr>
+                                    •	 Webmastering sur dondorganes.fr
+                                  </tr>
+                                  <tr>
+                                    •	 Production de newsletter pour Aviva
+                                  </tr>
+                              </table>
+                              <br />
+                              <h4 className={classes.modalTitle}>Quelques clients</h4>
+                              <img
+                                alt="..."
+                                src={client1}
+                                className={navImageClasses}
+                              />                            
+                              <img
+                                alt="..."
+                                src={client2}
+                                className={navImageClasses}
+                              />                            
+                              <img
+                                alt="..."
+                                src={client3}
+                                className={navImageClasses}
+                              />
                             </DialogContent>
                             <DialogActions className={classes.modalFooter}>
-                              <Button color="transparent" simple>
-                                Nice Button
+                              <Button color="transparent" simple onClick={()=>window.open("https://www.ddb.fr/")} >
+                                Vers le site
                               </Button>
                               <Button
                                 onClick={() => setClassicModal(false)}
                                 color="danger"
                                 simple
                               >
-                                Close
+                                Fermer
                               </Button>
                             </DialogActions>
                           </Dialog>     
 
                             <img
                               alt="..."
-                              src={study1}
+                              src={job2}
                               className={navImageClasses}
                               onClick={() => setClassicModal1(true)}
                             />
@@ -254,43 +288,46 @@ export default function Portfolio(props) {
                               >
                                 <Close className={classes.modalClose} />
                               </IconButton>
-                              <h4 className={classes.modalTitle}>Modal title 2 </h4>
-                            </DialogTitle>
+                              <h3 className={classes.modalTitle}>Lesieur/Puget: Chef de Projet Digital Junior</h3>
+                              <h4 className={classes.modalTitle}>Alternance</h4>
+                              <h5 className={classes.modalTitle}>2017-2018</h5>              
+                              </DialogTitle>
                             <DialogContent
                               id="classic-modal-slide-description"
                               className={classes.modalBody}
                             >
-                              <p>
-                                Far far away, behind the word mountains, far from the
-                                countries Vokalia and Consonantia, there live the blind
-                                texts. Separated they live in Bookmarksgrove right at the
-                                coast of the Semantics, a large language ocean. A small
-                                river named Duden flows by their place and supplies it
-                                with the necessary regelialia. It is a paradisematic
-                                country, in which roasted parts of sentences fly into your
-                                mouth. Even the all-powerful Pointing has no control about
-                                the blind texts it is an almost unorthographic life One
-                                day however a small line of blind text by the name of
-                                Lorem Ipsum decided to leave for the far World of Grammar.
-                              </p>
+                                <table>
+                                  <tr>
+                                    •	 Mise en place d’une plateforme d’e-Learning
+                                  </tr>
+                                  <tr>
+                                    •	 RFI / RFP Social Media et e-Learning
+                                  </tr>
+                                  <tr>
+                                    •	 Webmastering
+                                  </tr>
+                                  <tr>
+                                    •	 Relation avec agences
+                                  </tr>
+                              </table>
                             </DialogContent>
                             <DialogActions className={classes.modalFooter}>
                               <Button color="transparent" simple>
-                                Nice Button
+                                Vers le site
                               </Button>
                               <Button
                                 onClick={() => setClassicModal1(false)}
                                 color="danger"
                                 simple
                               >
-                                Close
+                                Fermer
                               </Button>
                             </DialogActions>
                           </Dialog>
 
                             <img
                               alt="..."
-                              src={study1}
+                              src={job3}
                               className={navImageClasses}
                               onClick={() => setClassicModal2(true)}
 
@@ -321,36 +358,39 @@ export default function Portfolio(props) {
                               >
                                 <Close className={classes.modalClose} />
                               </IconButton>
-                              <h4 className={classes.modalTitle}>Modal title 3 </h4>
-                            </DialogTitle>
+                              <h3 className={classes.modalTitle}>Assistant chargé de clientèle</h3>
+                              <h4 className={classes.modalTitle}>Stage de 6 mois : Leader modération en France</h4>
+                              <h5 className={classes.modalTitle}>2017</h5>                               
+                              </DialogTitle>
                             <DialogContent
                               id="classic-modal-slide-description"
                               className={classes.modalBody}
                             >
-                              <p>
-                                Far far away, behind the word mountains, far from the
-                                countries Vokalia and Consonantia, there live the blind
-                                texts. Separated they live in Bookmarksgrove right at the
-                                coast of the Semantics, a large language ocean. A small
-                                river named Duden flows by their place and supplies it
-                                with the necessary regelialia. It is a paradisematic
-                                country, in which roasted parts of sentences fly into your
-                                mouth. Even the all-powerful Pointing has no control about
-                                the blind texts it is an almost unorthographic life One
-                                day however a small line of blind text by the name of
-                                Lorem Ipsum decided to leave for the far World of Grammar.
-                              </p>
+                                <table>
+                                  <tr>
+                                    •	 Modération : Facebook / Instagram
+                                  </tr>
+                                  <tr>
+                                    •	 Community management
+                                  </tr>
+                                  <tr>
+                                    •	 Réponse de niveau 1 et 2
+                                  </tr>
+                                  <tr>
+                                    •	 Bilans mensuels
+                                  </tr>
+                              </table>
                             </DialogContent>
                             <DialogActions className={classes.modalFooter}>
                               <Button color="transparent" simple>
-                                Nice Button
+                                Vers le site
                               </Button>
                               <Button
                                 onClick={() => setClassicModal2(false)}
                                 color="danger"
                                 simple
                               >
-                                Close
+                                Fermer
                               </Button>
                             </DialogActions>
                           </Dialog>    
