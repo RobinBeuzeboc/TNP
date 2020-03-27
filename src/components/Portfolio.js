@@ -101,8 +101,10 @@ export default function Portfolio(props) {
             </GridContainer>
             <div className={classes.description}>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In interdum sit amet velit et elementum. Praesent cursus ex non lorem tempus, nec iaculis urna posuere. In quis ex imperdiet, tempor orci in, commodo ligula. Praesent enim ligula, ullamcorper fermentum luctus quis, pharetra eget arcu. Mauris vestibulum nunc placerat suscipit feugiat. Phasellus nec nibh pellentesque ex hendrerit malesuada id ac dui. Sed posuere diam in euismod consequat. Nunc eget congue eros, vitae ornare elit..{" "}
-              </p>
+              Précédemment Chef de Projet Multimédia en Alternance - Institut de l'Internet et du Multimédia Master Communication Digitale et Stratégie Social Média. <br />
+              Suite à l'obtention de mon diplôme, je suis en recherche active d'une opportunité professionnelle en tant que Chef de Projet Digital. <br />
+
+           </p>
             </div>
             <GridContainer justify="center">
               <GridItem xs={12} sm={12} md={8} className={classes.navWrapper}>
