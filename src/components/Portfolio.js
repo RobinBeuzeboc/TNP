@@ -22,7 +22,7 @@ import Header from "./profilePageComponents/Header/Header.js";
 import Footer from "./profilePageComponents/Footer/Footer.js";
 import GridContainer from "./profilePageComponents/Grid/GridContainer.js";
 import GridItem from "./profilePageComponents/Grid/GridItem.js";
-// import HeaderLinks from "./profilePageComponents/Header/HeaderLinks.js";
+import HeaderLinks from "./profilePageComponents/Header/HeaderLinks.js";
 import NavPills from "./profilePageComponents/NavPills/NavPills.js";
 import Parallax from "./profilePageComponents/Parallax/Parallax.js";
 
@@ -71,7 +71,7 @@ export default function Portfolio(props) {
       <Header
         color='transparent'
         brand="Thibaut Neu"
-        // rightLinks={<HeaderLinks />}
+        rightLinks={<HeaderLinks />}
         fixed
         changeColorOnScroll={{
           height: 200,
