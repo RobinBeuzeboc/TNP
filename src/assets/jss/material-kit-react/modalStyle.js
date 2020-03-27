@@ -8,11 +8,13 @@ const modalStyle = {
     paddingRight: "24px",
     paddingBottom: "0",
     paddingLeft: "24px",
-    minHeight: "16.43px"
+    minHeight: "16.43px",
+    fontFamily: `"Baloo 2"`
   },
   modalTitle: {
     margin: "0",
-    lineHeight: "1.42857143"
+    lineHeight: "1.42857143",
+    fontFamily: `"Baloo 2"`
   },
   modalCloseButton: {
     color: "#999999",
@@ -27,7 +29,8 @@ const modalStyle = {
     textShadow: "none",
     fontWeight: "700",
     lineHeight: "1",
-    float: "right"
+    float: "right",
+    fontFamily: `"Baloo 2"`
   },
   modalClose: {
     width: "16px",
@@ -38,17 +41,20 @@ const modalStyle = {
     paddingRight: "24px",
     paddingBottom: "16px",
     paddingLeft: "24px",
-    position: "relative"
+    position: "relative",
+    fontFamily: `"Baloo 2"`
   },
   modalFooter: {
     padding: "15px",
     textAlign: "right",
     paddingTop: "0",
-    margin: "0"
+    margin: "0",
+    fontFamily: `"Baloo 2"`
   },
   modalFooterCenter: {
     marginLeft: "auto",
-    marginRight: "auto"
+    marginRight: "auto",
+    fontFamily: `"Baloo 2"`
   }
 };
 
