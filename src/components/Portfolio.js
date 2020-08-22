@@ -25,10 +25,10 @@ import GridItem from "./profilePageComponents/Grid/GridItem.js";
 import HeaderLinks from "./profilePageComponents/Header/HeaderLinks.js";
 import NavPills from "./profilePageComponents/NavPills/NavPills.js";
 import Parallax from "./profilePageComponents/Parallax/Parallax.js";
+import Typography from '@material-ui/core/Typography';
 
 // import images
 import profile from "../assets/img/faces/thibaut-profile-round.jpg";
-
 import study1 from "../assets/img/study-1.jpg"
 
 import project1 from '../assets/img/project-1.png'
@@ -44,7 +44,7 @@ import client2 from '../assets/img/client-2.jpg'
 import client3 from '../assets/img/client-3.png'
 
 // import styles
-import profilePageStyle from "../assets/jss/material-kit-react/views/profilePage.js";
+import profilePageStyle from "../assets/jss/material-kit-react/views/profilePage.js"
 
 const useStyles = makeStyles(profilePageStyle);
 
@@ -84,326 +84,91 @@ export default function Portfolio(props) {
         <div>
           <div className={classes.container}>
             <GridContainer justify="center">
-              <GridItem xs={12} sm={12} md={6}>
-                <div className={classes.profile}>
+              <GridItem xs={12} sm={12} md={8}>
+                <div className={classes.infos}>
+                  <Typography variant='h3'>
+                    Qui suis-je ?
+                  </Typography>
+                  <br />
                   <div>
-                    <img src={profile} alt="..." className={imageClasses} />
+                    <Typography variant='body1'>
+                      Bonjour, je m'appelle Thibaut et Lorem ipsum dolor sit amet,
+                      consectetur adipiscing elit.
+                      Donec id fermentum sem.
+                      Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;
+                      Proin posuere finibus blandit. Aenean a elementum massa, ac imperdiet nisl. 
+                      Morbi ornare lobortis enim, vel varius nibh facilisis at.
+                      Nunc at eleifend leo, sit amet cursus purus. Etiam posuere nec ipsum a accumsan.
+                      Aliquam odio ligula, feugiat sed congue eu, tempor a quam. Sed in viverra arcu.
+                      Curabitur maximus nibh ex, in suscipit orci mollis vitae.
+                      Sed tempor nulla nec rhoncus finibus. Vivamus auctor faucibus tincidunt.
+                      Duis est nibh, suscipit sit amet metus fermentum, ultrices tristique tortor.
+                      Quisque cursus feugiat felis id tristique.
+                    </Typography>
                   </div>
-                  <div className={classes.name}>
-                    <h3 className={classes.title}>Thibaut Neu</h3> <br />
-                    <h4 className={classes.title}>CHEF DE PROJET</h4><br />
-                    <IconButton onClick={()=> window.open("https://www.linkedin.com/in/thibaut-neu-080307b7/", "_blank")}>
-                      <LinkedInIcon fontSize='large' color='primary'/>
-                    </IconButton>
+                  <div>
+                    <img
+                      alt="..."
+                      src={profile}
+                      className={navImageClasses}
+                    />
+                  </div>
+                  <Button>
+                    Mon CV
+                  </Button>
+                </div>
+              </GridItem>
+              <GridItem xs={12} sm={12} md={8}>
+                <div className={classes.infos}>
+                  <Typography variant='h3'>
+                    Parcours
+                  </Typography>
+                  <br />
+                  <div>
+                   timeline goes here
+                  </div>
+                </div>
+              </GridItem>
+              <GridItem xs={12} sm={12} md={8}>
+                <div className={classes.infos}>
+                  <Typography variant='h3'>
+                    Compétences
+                  </Typography>
+                  <br />
+                  <div>
+                   compétences goes here
+                  </div>
+                </div>
+              </GridItem>
+              <GridItem xs={12} sm={12} md={8}>
+                <div className={classes.infos}>
+                  <Typography variant='h3'>
+                    Projets
+                  </Typography>
+                  <br />
+                  <div>
+                   Projets goes here
+                  </div>
+                </div>
+              </GridItem>
+              <GridItem xs={12} sm={12} md={8}>
+                <div className={classes.infos}>
+                  <Typography variant='h3'>
+                    Passions
+                  </Typography>
+                  <br />
+                  <div>
+                   Passions goes here
                   </div>
                 </div>
               </GridItem>
             </GridContainer>
-            <div className={classes.description}>
-              <p>
-              Précédemment Chef de Projet Multimédia en Alternance - Institut de l'Internet et du Multimédia Master Communication Digitale et Stratégie Social Média. <br />
-              Suite à l'obtention de mon diplôme, je suis en recherche active d'une opportunité professionnelle en tant que Chef de Projet Digital. <br />
-
-           </p>
-            </div>
-            <GridContainer justify="center">
-              <GridItem xs={12} sm={12} md={8} className={classes.navWrapper}>
-                <NavPills
-                  alignCenter
-                  color="primary"
-                  tabs={[
-                    {
-                      tabButton: "Formation",
-                      tabIcon: MenuBookIcon,
-                      tabContent: (
-                        <GridContainer justify="center">
-                          <GridItem xs={12} sm={12} md={4}>
-                          <a href='https://www.iim.fr/'>
-                            <img
-                              alt="..."
-                              src={study1}
-                              className={navImageClasses}
-                            />
-                            </a>
-                          </GridItem>
-                        </GridContainer>
-                      )
-                    },
-                    {
-                      tabButton: "Projets",
-                      tabIcon: AccountTreeIcon,
-                      tabContent: (
-                        <GridContainer justify="center">
-                          <GridItem xs={12} sm={12} md={4}>
-                          <a href='https://alcoometre.fr/'>
-                            <img
-                              alt="..."
-                              src={project1}
-                              className={navImageClasses}
-                            />
-                          </a>
-                          <a href='https://www.dondorganes.fr/'>      
-                              <img
-                                alt="..."
-                                src={project2}
-                                className={navImageClasses}
-                              />
-                          </a>
-                          <a href='https://campus-vtc.com/'>
-                            <img
-                              alt="..."
-                              src={project3}
-                              className={navImageClasses}
-                            />
-                          </a>
-                          </GridItem>
-                        </GridContainer>
-                      )
-                    },
-                    {
-                      tabButton: "Postes",
-                      tabIcon: WorkIcon,
-                      tabContent: (
-                        <GridContainer justify="center">
-                          <GridItem xs={12} sm={12} md={4}>
-                            <img
-                              alt="..."
-                              src={job1}
-                              className={navImageClasses}
-                              onClick={() => setClassicModal(true)}
-                            />
-                          <Dialog
-                            classes={{
-                              root: classes.center,
-                              paper: classes.modal
-                            }}
-                            open={classicModal}
-                            TransitionComponent={Transition}
-                            keepMounted
-                            onClose={() => setClassicModal(false)}
-                            aria-labelledby="classic-modal-slide-title"
-                            aria-describedby="classic-modal-slide-description"
-                          >
-                            <DialogTitle
-                              id="classic-modal-slide-title"
-                              disableTypography
-                              className={classes.modalHeader}
-                            >
-                              <IconButton
-                                className={classes.modalCloseButton}
-                                key="close"
-                                aria-label="Close"
-                                color="inherit"
-                                onClick={() => setClassicModal(false)}
-                              >
-                                <Close className={classes.modalClose} />
-                              </IconButton>
-                              <h3 className={classes.modalTitle}>DDB: Assistant Chef de Projet Digital</h3>
-                              <h4 className={classes.modalTitle}>Alternance</h4>
-                              <h5 className={classes.modalTitle}>2018-2019</h5>
-                            </DialogTitle>
-                            <DialogContent
-                              id="classic-modal-slide-description"
-                              className={classes.modalBody}
-                            >
-                              <table>
-                                  <tr>
-                                    •	 Refonte du site <a href='https://alcoometre.fr/'>Alcoometre.fr</a>
-                                  </tr>
-                                  <tr>
-                                    •	Production des visuels et des maquettes
-                                  </tr>
-                                  <tr>
-                                    •	 Recettes
-                                  </tr>
-                                  <tr>
-                                    •	 Production de campagnes Display (Uber et Intermarché)
-                                  </tr>
-                                  <tr>
-                                    •	 Webmastering sur dondorganes.fr
-                                  </tr>
-                                  <tr>
-                                    •	 Production de newsletter pour Aviva
-                                  </tr>
-                              </table>
-                              <br />
-                              <h4 className={classes.modalTitle}>Quelques clients</h4>
-                              <img
-                                alt="..."
-                                src={client1}
-                                className={navImageClasses}
-                              />                            
-                              <img
-                                alt="..."
-                                src={client2}
-                                className={navImageClasses}
-                              />                            
-                              <img
-                                alt="..."
-                                src={client3}
-                                className={navImageClasses}
-                              />
-                            </DialogContent>
-                            <DialogActions className={classes.modalFooter}>
-                              <Button color="transparent" simple onClick={()=>window.open("https://www.ddb.fr/")} >
-                                Vers le site
-                              </Button>
-                              <Button
-                                onClick={() => setClassicModal(false)}
-                                color="danger"
-                                simple
-                              >
-                                Fermer
-                              </Button>
-                            </DialogActions>
-                          </Dialog>     
-
-                            <img
-                              alt="..."
-                              src={job2}
-                              className={navImageClasses}
-                              onClick={() => setClassicModal1(true)}
-                            />
-                             <Dialog
-                            classes={{
-                              root: classes.center,
-                              paper: classes.modal
-                            }}
-                            open={classicModal1}
-                            TransitionComponent={Transition}
-                            keepMounted
-                            onClose={() => setClassicModal1(false)}
-                            aria-labelledby="classic-modal-slide-title"
-                            aria-describedby="classic-modal-slide-description"
-                          >
-                            <DialogTitle
-                              id="classic-modal-slide-title"
-                              disableTypography
-                              className={classes.modalHeader}
-                            >
-                              <IconButton
-                                className={classes.modalCloseButton}
-                                key="close"
-                                aria-label="Close"
-                                color="inherit"
-                                onClick={() => setClassicModal1(false)}
-                              >
-                                <Close className={classes.modalClose} />
-                              </IconButton>
-                              <h3 className={classes.modalTitle}>Lesieur/Puget: Chef de Projet Digital Junior</h3>
-                              <h4 className={classes.modalTitle}>Alternance</h4>
-                              <h5 className={classes.modalTitle}>2017-2018</h5>              
-                              </DialogTitle>
-                            <DialogContent
-                              id="classic-modal-slide-description"
-                              className={classes.modalBody}
-                            >
-                                <table>
-                                  <tr>
-                                    •	 Mise en place d’une plateforme d’e-Learning
-                                  </tr>
-                                  <tr>
-                                    •	 RFI / RFP Social Media et e-Learning
-                                  </tr>
-                                  <tr>
-                                    •	 Webmastering
-                                  </tr>
-                                  <tr>
-                                    •	 Relation avec agences
-                                  </tr>
-                              </table>
-                            </DialogContent>
-                            <DialogActions className={classes.modalFooter}>
-                              <Button color="transparent" simple>
-                                Vers le site
-                              </Button>
-                              <Button
-                                onClick={() => setClassicModal1(false)}
-                                color="danger"
-                                simple
-                              >
-                                Fermer
-                              </Button>
-                            </DialogActions>
-                          </Dialog>
-
-                            <img
-                              alt="..."
-                              src={job3}
-                              className={navImageClasses}
-                              onClick={() => setClassicModal2(true)}
-
-                            />
-                            <Dialog
-                            classes={{
-                              root: classes.center,
-                              paper: classes.modal
-                            }}
-                            open={classicModal2}
-                            TransitionComponent={Transition}
-                            keepMounted
-                            onClose={() => setClassicModal2(false)}
-                            aria-labelledby="classic-modal-slide-title"
-                            aria-describedby="classic-modal-slide-description"
-                          >
-                            <DialogTitle
-                              id="classic-modal-slide-title"
-                              disableTypography
-                              className={classes.modalHeader}
-                            >
-                              <IconButton
-                                className={classes.modalCloseButton}
-                                key="close"
-                                aria-label="Close"
-                                color="inherit"
-                                onClick={() => setClassicModal2(false)}
-                              >
-                                <Close className={classes.modalClose} />
-                              </IconButton>
-                              <h3 className={classes.modalTitle}>Assistant chargé de clientèle</h3>
-                              <h4 className={classes.modalTitle}>Stage de 6 mois : Leader modération en France</h4>
-                              <h5 className={classes.modalTitle}>2017</h5>                               
-                              </DialogTitle>
-                            <DialogContent
-                              id="classic-modal-slide-description"
-                              className={classes.modalBody}
-                            >
-                                <table>
-                                  <tr>
-                                    •	 Modération : Facebook / Instagram
-                                  </tr>
-                                  <tr>
-                                    •	 Community management
-                                  </tr>
-                                  <tr>
-                                    •	 Réponse de niveau 1 et 2
-                                  </tr>
-                                  <tr>
-                                    •	 Bilans mensuels
-                                  </tr>
-                              </table>
-                            </DialogContent>
-                            <DialogActions className={classes.modalFooter}>
-                              <Button color="transparent" simple>
-                                Vers le site
-                              </Button>
-                              <Button
-                                onClick={() => setClassicModal2(false)}
-                                color="danger"
-                                simple
-                              >
-                                Fermer
-                              </Button>
-                            </DialogActions>
-                          </Dialog>    
-                          </GridItem>
-                        </GridContainer>
-                      )
-                    }
-                  ]}
-                />
-              </GridItem>
-            </GridContainer>
+            <Typography variant='h3'>
+              Contactez moi
+            </Typography>
+            <br />
+           
+            {/* https://github.com/kpolakowski/Registration-form-Material-UI */}
           </div>
         </div>
       </div>
